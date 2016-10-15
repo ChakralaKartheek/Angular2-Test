@@ -17,9 +17,8 @@ var EmpComponent = (function () {
     function EmpComponent(empService) {
         this.empService = empService;
         this.emps = [];
+        this.selectedEmp = new emp_1.Emp(5, "Laura", "Female", "", "I am Actress", "US", 1700);
         this.mode = 'Observable';
-        this.selectedEmp = emp_1.Emp;
-        //   this.emps[0];
         this.submitted = false;
         this.GenderOptions = ["Male", "Female"];
     }
@@ -27,7 +26,13 @@ var EmpComponent = (function () {
     EmpComponent.prototype.getEmps = function () {
         var _this = this;
         this.empService.getEmployees()
-            .subscribe(function (emps) { _this.emps = emps; console.log(_this.emps); }, function (error) { return _this.errorMessage = error; });
+            .subscribe(function (emps) {
+            _this.emps = emps;
+            debugger;
+            _this.selectedEmp = _this.emps[0];
+            //    var semp = this.selectedEmp;
+            console.log(_this.selectedEmp);
+        }, function (error) { return _this.errorMessage = error; });
     };
     EmpComponent.prototype.onSubmit = function () { this.submitted = true; };
     EmpComponent.prototype.onEmpSelect = function (emp) {

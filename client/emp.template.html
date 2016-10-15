@@ -1,11 +1,13 @@
-<label>{{length}}</label>
+
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
 
                 <div class="btn-group btn-group-justified" role="group" aria-label="Justified button group">
-                  <label>  {{emps | json}}</label>
+                <div *ngFor="let emp of emps" class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" (click)="onEmpSelect(emp)">{{emp.Name}}</button>
+                    </div>
                 </div>
 
             </div>

@@ -25,7 +25,8 @@ var EmpService = (function () {
     };
     EmpService.prototype.extractData = function (res) {
         var body = res.json();
-        return body.data || {};
+        console.log(body);
+        return body || [];
     };
     EmpService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure

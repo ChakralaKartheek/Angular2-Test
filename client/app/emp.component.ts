@@ -23,17 +23,23 @@ ngOnInit() { this.getEmps(); }
 
 emps : Emp [] = [];
 errorMessage : string;
+selectedEmp :  Emp = new Emp(5, "Laura", "Female", "", "I am Actress", "US", 1700);
 mode = 'Observable';
 
  getEmps() {
     this.empService.getEmployees()
                      .subscribe( 
-                       emps => {this.emps = emps; console.log(this.emps); },
+                       emps => {this.emps = emps; 
+                           debugger;
+                            this.selectedEmp =  this.emps[0]; 
+                        //    var semp = this.selectedEmp;
+                        console.log(this.selectedEmp); 
+                    },
                        error =>  this.errorMessage = <any>error);
   }
-length = this.emps.length;
-    selectedEmp = Emp
-  //   this.emps[0];
+
+  
+  
     submitted = false;
     onSubmit() { this.submitted = true; }
 
