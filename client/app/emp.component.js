@@ -8,12 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var emp_1 = require('./emp');
-var emp_service_1 = require('./emp.service');
-require('rxjs/add/operator/map');
-require('rxjs/add/operator/share');
-var EmpComponent = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var emp_1 = require("./emp");
+var emp_service_1 = require("./emp.service");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/share");
+var EmpComponent = /** @class */ (function () {
     function EmpComponent(empService) {
         this.empService = empService;
         this.emps = [];
@@ -44,8 +45,8 @@ var EmpComponent = (function () {
             // moduleId:module.id,
             selector: 'emp-elem',
             templateUrl: 'emp.template.html'
-        }), 
-        __metadata('design:paramtypes', [emp_service_1.EmpService])
+        }),
+        __metadata("design:paramtypes", [emp_service_1.EmpService])
     ], EmpComponent);
     return EmpComponent;
 }());

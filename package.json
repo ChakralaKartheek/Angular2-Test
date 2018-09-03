@@ -3,10 +3,8 @@
   "version": "0.0.0",
   "description": "BasicExpress",
   "scripts": {
- "start": "concurrently \"tsc -w\" \"tsc -w -p ./client\" \"node app.js",
-   
+    "start": "concurrently \"tsc -w\" \"tsc -w -p ./client\" \"node app.js",
     "postinstall": "typings install",
-  
     "typings": "typings"
   },
   "main": "app.js",
@@ -17,13 +15,10 @@
     "express": "3.4.4",
     "jade": "*",
     "stylus": "*"
-    
   },
-
   "devDependencies": {
-
     "concurrently": "^3.0.0",
-     "typescript": "^2.0.3",
-    "typings":"^1.4.0"
+    "typescript": "^2.0.3",
+    "typings": "^1.4.0"
   }
 }

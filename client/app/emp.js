@@ -1,5 +1,6 @@
-// interface IEmp {
 "use strict";
+// interface IEmp {
+Object.defineProperty(exports, "__esModule", { value: true });
 //     ID: number;
 //     Name: string;
 //     Gender: string;
@@ -29,7 +30,7 @@
 //         this.Salary =  obj.Salary;
 //     }
 // }
-var Emp = (function () {
+var Emp = /** @class */ (function () {
     function Emp(ID, Name, Gender, MaleText, FemaleText, Address, Salary) {
         this.ID = ID;
         this.Name = Name;
